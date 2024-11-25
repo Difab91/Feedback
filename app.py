@@ -96,7 +96,7 @@ human_template_constant = (
 
 # Fonction pour sélectionner un fichier aléatoire
 def choose_file():
-    type_fichier = random.choice(['dataservice','restangular','component'])
+    type_fichier = random.choice(['service', 'constants','dataservice','restangular','component'])
     
     if type_fichier == 'service' and bad_services:
         chemin_fichier = random.choice(bad_services)
