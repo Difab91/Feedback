@@ -15,7 +15,7 @@ ollama_model = os.getenv("OLLAMA_MODEL")
 
 model = OllamaLLM(model=ollama_model, base_url=ollama_base_url)
 
-# contexte apporter à l'IA
+# contexte apporter à l'IA  
 system_template = """Tu es un expert en migration d'applications AngularJS vers Angular 17, ton objectif est de retourner du code Angular 17 qui utilise les fonctionnalités modernes d'Angular 17 tout en maintenant les bonnes pratiques Angular actuelles."""
 
 
