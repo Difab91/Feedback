@@ -7,7 +7,7 @@ import time
 from dotenv import load_dotenv
 from langchain.prompts import ChatPromptTemplate
 from langchain_ollama.llms import OllamaLLM
-import Levenshtein
+from files import count_caracteres, count_lines_of_code, levenshtein_distance
 from files import bad_constants, bad_services, bad_components, bad_dataservice, bad_restangular
 
 load_dotenv()
@@ -129,15 +129,6 @@ def conversion(code_to_convert, chain):
         st.error(f"Erreur dans la conversion : {error}")
         return None
 
-# Fonction pour calculer les caractéristiques
-def count_caracteres(code_source: str) -> int:
-    return len(code_source)
-
-def count_lines_of_code(code):
-    return len(code.splitlines())
-
-def levenshtein_distance(code1, code2):
-    return Levenshtein.distance(code1, code2)
 
 # Chargement des données JSON existantes
 data = []
